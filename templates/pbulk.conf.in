@@ -208,6 +208,11 @@ pkg_sufx=@PKG_SUFFIX@
 #
 @CLIENT_CLEAN_LOCAL@
 
+# Export any variables that are defined by forking processes prior to mk.conf
+# being included, stopping us from simply adding them there like the others.
+#
+@PRECACHE_VARIABLES@
+
 # Source optional user preferences file.
 #
 userprefs="@PKGBUILD_BASEDIR@/conf/@PKGBUILD@/pbulk.conf.local"
