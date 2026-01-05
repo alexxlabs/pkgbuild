@@ -22,7 +22,7 @@ pi_required=@PI_REQUIRED@
 # The URL where the build report will be made available. This is only
 # used in the .txt version of the report.
 #
-base_url=@MANTA_URL@/@MANTA_USER@/public/reports/@REPORT_DIR@
+base_url=@BASE_URL@
 
 # If yes, keep the last scan results in ${bulklog}.orig and try to reuse them.
 #
@@ -59,8 +59,8 @@ MANTA_SYNC_ARGS="@MANTA_SYNC_ARGS@"
 @RSYNC_PKGS@pkg_rsync_target_linkdest="@REMOTE_PACKAGE_PREFIX@/@REMOTE_PACKAGE_BASEDIR@/@REMOTE_PACKAGE_DIR@"
 @RSYNC_PKGS@pkg_rsync_target_tmpdest="@REMOTE_PACKAGE_PREFIX@/.@REMOTE_PACKAGE_BASEDIR@/@REMOTE_PACKAGE_DIR@"
 @RSYNC_REPORT@report_rsync_args="-avz --delete-excluded -e ssh"
-@RSYNC_REPORT@report_rsync_target="@REMOTE_PACKAGE_SERVER@:@REMOTE_PACKAGE_PREFIX@/@REMOTE_REPORT_URL@/@REPORT_DIR@"
-@RSYNC_REPORT@report_manta_target="/@MANTA_USER@/public/reports/@REPORT_DIR@"
+@RSYNC_REPORT@report_rsync_target="@REMOTE_REPORT_SERVER@@REPORT_DIR@"
+@MANTA_RSYNC_REPORT@report_manta_target="/@MANTA_USER@/public/reports/@REPORT_DIR@"
 report_subject_prefix="@SUBJECT_PREFIX@"
 report_recipients="@REPORT_RECIPIENTS@"
 report_from_addr="@REPORT_FROM_ADDR@"
