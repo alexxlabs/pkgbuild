@@ -43,6 +43,8 @@ if [ -d ${chrootdir} ]; then
 		kill -9 ${pids} 2>/dev/null
 	fi
 
+	umount -f ${chrootdir}/proc 2>/dev/null
+
 	for mount in ${TMPFS_MOUNTS}; do
 		dst=${mount#*=}
 		umount -f ${chrootdir}${dst} 2>/dev/null

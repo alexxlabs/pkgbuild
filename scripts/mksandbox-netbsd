@@ -83,6 +83,9 @@ for tmpdir in ${TMPFS_MOUNTS}; do
 	mount -t tmpfs tmpfs ${chrootdir}${tmpdir}
 done
 
+mkdir -p ${chrootdir}/proc
+mount_procfs /proc ${chrootdir}/proc
+
 mkdir -p ${chrootdir}/dev
 cp /dev/MAKEDEV* ${chrootdir}/dev
 (cd ${chrootdir}/dev; ./MAKEDEV all)
