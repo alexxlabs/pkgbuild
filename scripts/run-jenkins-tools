@@ -59,7 +59,7 @@ env -i ${CMD_CHROOT} ${CHROOT_BASEDIR}/pkgsrc-${PKGBUILD} ${CMD_SHELL} -c "
 		(
 			cd \${pkg} &&
 			pkg_info -qE \$(bmake show-var VARNAME=PKGBASE) ||
-			(bmake bin-install; bmake clean clean-depends)
+			(bmake PKGSRC_KEEP_BIN_PKGS=yes bin-install; bmake clean clean-depends)
 		)
 	done
 "
