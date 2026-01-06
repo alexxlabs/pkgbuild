@@ -26,10 +26,15 @@ checks_passed=true
 if [ -f "${pkg_rsync_required_pkgs}" ]; then
 	while read pkg; do
 		[[ "${pkg}" =~ ^# ]] && continue
-		pkgstat=$(awk -F'|' '$1 ~ /^'${pkg}'/ { print $2; exit; }' ${loc}/pbuild)
-		if [ "${pkgstat}" != "done" ]; then
+		pkgstat=$(awk -F'|' '
+			BEGIN { fail="not found" }
+			$1 ~ /^'$pkg'/ && $2 ~ /done/ { fail=""; exit(0); }
+			$1 ~ /^'$pkg'/ { fail=$2 }
+			END { if (fail) { print fail; exit(1); } }
+		' < ${loc}/pbuild)
+		if [ $? -ne 0 ]; then
 			checks_passed=false
-			echo "ERROR: Core package '${pkg}' unavailable (${pkgstat:-not found})."
+			echo "ERROR: Core package '${pkg}' unavailable (${pkgstat})."
 		fi
 	done < ${pkg_rsync_required_pkgs}
 fi
