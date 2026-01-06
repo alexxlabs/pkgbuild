@@ -31,6 +31,14 @@ if [ -n "${PBULK_RESTART}" ]; then
 fi
 
 #
+# Allow the bootstrap to be skipped.  Helps e.g. macOS where updating the
+# bootstrap kit often results in SIGBUS, sigh.
+#
+if [ -n "${SKIP_BOOTSTRAP}" ]; then
+	exit 0
+fi
+
+#
 # For trunk-based builds we rebuild the bootstrap kit each time, to ensure
 # there are no conflicts with bootstrap package versions being bumped.  It
 # would be better if there were a way to detect this was necessary, e.g. by
