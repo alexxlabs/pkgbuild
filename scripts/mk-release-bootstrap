@@ -51,6 +51,15 @@ env -i ${CMD_CHROOT} ${CHROOT_BASEDIR}/bootstrap-${pkgbuild} ${CMD_SHELL} -c "
 	PATH=${PKGBUILD_LOCALBASE}/sbin:${PKGBUILD_LOCALBASE}/bin:${PBULK_PATH}
 
 	#
+	# Remove packages that are bundled into the pbulk bootstrap but that
+	# are not needed in the release tarballs, mostly development packages.
+	#
+	for pkg in bsdinstall cwrappers mktools; do
+		${PKGBUILD_LOCALBASE}/sbin/pkg_info -qe \$pkg && \
+		    ${PKGBUILD_LOCALBASE}/sbin/pkg_delete -ff \$pkg
+	done
+
+	#
 	# Ensure bootstrap packages are upgraded as well as installing the
 	# additional release packages to ensure we use main ones (SSL-enabled)
 	# and not the limited bootstrap ones.
