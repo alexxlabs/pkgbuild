@@ -72,7 +72,7 @@ for mount in ${LOFS_RO_MOUNTS}; do
 	mkdir -p ${chrootdir}${dst}
 	(
 		ulimit -Sn $(sysctl -n kern.maxfilesperproc)
-		exec bindfs -r ${src} ${chrootdir}${dst}
+		exec /usr/local/bin/bindfs --multithreaded -r ${src} ${chrootdir}${dst}
 	)
 	mdutil -i off -d ${chrootdir}${dst} >/dev/null 2>&1
 done
@@ -83,7 +83,7 @@ for mount in ${LOFS_RW_MOUNTS}; do
 	mkdir -p ${chrootdir}${dst}
 	(
 		ulimit -Sn $(sysctl -n kern.maxfilesperproc)
-		exec bindfs ${src} ${chrootdir}${dst}
+		exec /usr/local/bin/bindfs --multithreaded ${src} ${chrootdir}${dst}
 	)
 	mdutil -i off -d ${chrootdir}${dst} >/dev/null 2>&1
 done
