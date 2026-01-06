@@ -114,6 +114,10 @@ chown root:mail ${chrootdir}/var/mail
 mkdir -p ${chrootdir}/tmp ${chrootdir}/var/tmp
 chmod 1777 ${chrootdir}/tmp ${chrootdir}/var/tmp
 
+mkdir -p ${chrootdir}/var/root/.gnupg
+chmod 0700 ${chrootdir}/var/root/.gnupg
+cp /var/root/.gnupg/*.gpg ${chrootdir}/var/root/.gnupg
+
 # Copy existing xcrun_db to avoid SIGBUS when invoking compiler tools for the
 # first time.
 roottmpdir=$(getconf DARWIN_USER_TEMP_DIR)
