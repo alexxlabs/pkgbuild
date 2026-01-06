@@ -27,3 +27,7 @@ PKG_OPTIONS.nginx-devel+=	dav status realip uwsgi memcache naxsi perl gzip
 PKG_OPTIONS.nmap+=	lua
 PKG_OPTIONS.vim+=	lua perl python ruby
 PKG_OPTIONS.weechat+=	lua perl python ruby wide-curses
+
+# Our current 12.3 SDK does not support C++ standards required by nodejs
+# version 23.x onwards.
+NODE_VERSION_DEFAULT=	22
