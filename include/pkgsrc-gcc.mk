@@ -23,6 +23,7 @@
  || ${PKGPATH:Mpkgtools/cwrappers} \
  || ${PKGPATH:Mpkgtools/digest} \
  || ${PKGPATH:Mpkgtools/isaexec} \
+ || ${PKGPATH:Mpkgtools/libnbcompat} \
  || ${PKGPATH:Mpkgtools/mktools} \
  || ${PKGPATH:Mpkgtools/pkg_install-info} \
  || ${PKGPATH:Msysutils/checkperms}

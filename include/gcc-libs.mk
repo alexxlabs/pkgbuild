@@ -43,6 +43,7 @@ SKIP_GCC_SHLIB.sysutils/bsdinstall=
  || ${PKGPATH:Mpkgtools/cwrappers} \
  || ${PKGPATH:Mpkgtools/digest} \
  || ${PKGPATH:Mpkgtools/isaexec} \
+ || ${PKGPATH:Mpkgtools/libnbcompat} \
  || ${PKGPATH:Mpkgtools/mktools} \
  || ${PKGPATH:Mpkgtools/pkg_install} \
  || ${PKGPATH:Mpkgtools/pkg_install-info} \
