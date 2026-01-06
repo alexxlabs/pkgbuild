@@ -13,22 +13,28 @@
  || ${PKGPATH:Mcad/occt} \
  || ${PKGPATH:Mchat/iamb} \
  || ${PKGPATH:Mcross/*gcc*} \
- || ${PKGPATH:Mdatabases/mariadb55-server} \
+ || ${PKGPATH:Mdatabases/mariadb*} \
  || ${PKGPATH:Mdatabases/mimir} \
  || ${PKGPATH:Mdatabases/mongodb} \
+ || ${PKGPATH:Mdatabases/mysql*} \
  || ${PKGPATH:Mdatabases/prometheus} \
  || ${PKGPATH:Mdevel/conftest} \
+ || ${PKGPATH:Mdevel/difftastic} \
+ || ${PKGPATH:Mdevel/mise} \
  || ${PKGPATH:Mdevel/netbeans-ide} \
  || ${PKGPATH:Mdevel/nextpnr-ice40} \
  || ${PKGPATH:Mdevel/py-llvmlite} \
  || ${PKGPATH:Mdevel/py-maturin} \
  || ${PKGPATH:Mdevel/syft} \
+ || ${PKGPATH:Mdevel/uv} \
  || ${PKGPATH:Mdevel/xulrunner*} \
  || ${PKGPATH:Meditors/helix} \
  || ${PKGPATH:Meditors/tp-note} \
  || ${PKGPATH:Memulators/Cygne-SDL} \
+ || ${PKGPATH:Memulators/jgenesis} \
  || ${PKGPATH:Memulators/mame} \
  || ${PKGPATH:Memulators/qemu} \
+ || ${PKGPATH:Memulators/qemu[0-9]*} \
  || ${PKGPATH:Memulators/unicorn} \
  || ${PKGPATH:Mextra/clickhouse} \
  || ${PKGPATH:Mextra/gcc*} \
@@ -39,12 +45,13 @@
  || ${PKGPATH:Mfonts/noto-ttf} \
  || ${PKGPATH:Mgames/flightgear*} \
  || ${PKGPATH:Mgames/sauerbraten-server} \
+ || ${PKGPATH:Mgames/warzone2100} \
  || ${PKGPATH:Mgames/wesnoth} \
  || ${PKGPATH:Mgames/xonotic-dedicated} \
  || ${PKGPATH:Mgeography/proj*} \
  || ${PKGPATH:Mgraphics/papirus-icon-theme} \
  || ${PKGPATH:Mgraphics/tesseract} \
- || ${PKGPATH:Mgraphics/vtk-docs} \
+ || ${PKGPATH:Mgraphics/vtk*} \
  || ${PKGPATH:Mham/gnuradio*} \
  || ${PKGPATH:Mjoyent/mariadb*-server} \
  || ${PKGPATH:Mjoyent/percona*} \
@@ -63,7 +70,11 @@
  || ${PKGPATH:Mmail/thunderbird*} \
  || ${PKGPATH:Mmisc/libreoffice*} \
  || ${PKGPATH:Mmultimedia/mlt} \
+ || ${PKGPATH:Mnet/arti} \
  || ${PKGPATH:Mnet/dnscontrol} \
+ || ${PKGPATH:Mnet/dnsdist} \
+ || ${PKGPATH:Mnet/gh} \
+ || ${PKGPATH:Mnet/helm} \
  || ${PKGPATH:Mnet/ipget} \
  || ${PKGPATH:Mnet/kubectl} \
  || ${PKGPATH:Mnet/minikube} \
@@ -71,16 +82,23 @@
  || ${PKGPATH:Mnet/rclone} \
  || ${PKGPATH:Mnet/scaleway-cli} \
  || ${PKGPATH:Mnet/tektoncd-cli} \
+ || ${PKGPATH:Mnet/termscp} \
  || ${PKGPATH:Mnet/terraform-provider-aws} \
  || ${PKGPATH:Mnet/terraform} \
+ || ${PKGPATH:Msecurity/defguard} \
  || ${PKGPATH:Msecurity/nuclei} \
+ || ${PKGPATH:Msecurity/sequoia-chameleon-gnupg} \
  || ${PKGPATH:Msecurity/sequoia-sq} \
+ || ${PKGPATH:Msecurity/sops} \
  || ${PKGPATH:Msecurity/trufflehog} \
  || ${PKGPATH:Msecurity/vault} \
+ || ${PKGPATH:Msecurity/vaultwarden} \
  || ${PKGPATH:Mshells/nushell} \
  || ${PKGPATH:Msysutils/consul} \
+ || ${PKGPATH:Msysutils/lima} \
  || ${PKGPATH:Msysutils/packer} \
  || ${PKGPATH:Msysutils/restic} \
+ || ${PKGPATH:Msysutils/skaffold} \
  || ${PKGPATH:Mwip/ghc} \
  || ${PKGPATH:Mwip/rust*} \
  || ${PKGPATH:Mwm/lefthk} \
