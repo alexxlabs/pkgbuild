@@ -107,6 +107,7 @@ H_CURSES_SET_ESCDELAY=			__nonexistent__
 H_CURSES_SYNCOK=			/usr/include/curses.h
 H_CURSES_VW_PRINTW=			__nonexistent__
 H_CURSES_WA_NORMAL=			__nonexistent__
+H_CURSES_WGETSCRREG=			__nonexistent__
 H_CURSES_WGETNSTR=			/usr/include/curses.h
 H_CURSES_WSYNCUP=			/usr/include/curses.h
 H_DB=					__nonexistent__
