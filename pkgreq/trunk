@@ -17,7 +17,7 @@ zoneinit-[0-9]
 # Triton required packages
 #
 apg-[0-9]
-bind-9.16.
+bind-9.18.
 curl-[0-9]
 dateutils-[0-9]
 gsed-[0-9]
@@ -46,7 +46,7 @@ texlive-collection-latexrecommended-[0-9]
 #
 # General packages required by users
 #
-ap24-ruby31-passenger-[0-9]
+ap24-ruby32-passenger-[0-9]
 c-icap-modules-[0-9]
 clamav-[0-9]
 couchdb-[0-9]
@@ -59,7 +59,6 @@ git-base-[0-9]
 gitea-[0-9]
 grafana-[0-9]
 isc-dhcpd-[0-9]
-mailman-[0-9]
 mbuffer-[0-9]
 mkvtoolnix-[0-9]
 normalize-[0-9]

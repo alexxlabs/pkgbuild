@@ -61,6 +61,10 @@ joyent/percona80-client
 joyent/percona80-cluster
 joyent/percona80-server
 joyent/percona80-xtrabackup
+joyent/percona84-client
+joyent/percona84-cluster
+joyent/percona84-server
+joyent/percona84-xtrabackup
 joyent/phantomjs-static
 joyent/php-mailparse
 joyent/postgresql-pg_top
